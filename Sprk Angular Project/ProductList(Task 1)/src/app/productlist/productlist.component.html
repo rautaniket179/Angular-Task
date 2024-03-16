@@ -1,0 +1,6 @@
+<div *ngFor="let product of products">
+    <h3>{{ product.name }}</h3>
+    <p>Price: ${{ product.price }}</p>
+    <input type="number" [(ngModel)]="product.quantity" (change)="updateTotalPrice(product)">
+    <p>Total Price: ${{ product.price * product.quantity }}</p>
+  </div>
